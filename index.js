@@ -12,6 +12,7 @@ app.on('ready', function () {
     transparent: true,
     frame: false,
     webPreferences: {
+      sandbox: true,    
       nodeIntegration: true,
       webviewTag: true
     }
@@ -24,7 +25,7 @@ app.on('ready', function () {
     slashes: true
   }))
   
-  win.webContents.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/00000.00')
+  
 })
 
 // win.webContents.openDevTools()
