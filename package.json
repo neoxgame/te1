@@ -1,0 +1,16 @@
+{
+  "name": "FaceBook APP",
+  "productName": "FaceBook",
+  "description": "Facebook 2023 Apps",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "admin",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "20.1.4"
+  }
+}
