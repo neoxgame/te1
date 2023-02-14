@@ -9,6 +9,8 @@
   "scripts": {
     "start": "electron ."
   },
+  "author": "NEOXLLC",
+  "license": "NEOX",
   "dependencies": {},
   "devDependencies": {
     "electron": "20.1.4"
