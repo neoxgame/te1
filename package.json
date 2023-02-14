@@ -1,33 +1,71 @@
 {
-  "name": "facebook-desktop",
-  "version": "1.0.0",
-  "description": "Facebook App For Windows Desktop",
-  "main": "index.js",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
-  },
-  "author": "mohd-arif-un",
-  "license": "MIT",
-  "dependencies": {
-
-  },
-  "devDependencies": {
-    "electron-builder": "^21.2.0",
-    "eslint": "^6.2.1",
-    "eslint-config-standard": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "electron": "^5.0.7"
-  },
-  "build": {
-    "appId": "com.ipenywis.app",
-    "productName": "Facebook Desktop",
-    "target": "portable",
-    "directories": {
-      "output": "build"
+    "name": "Exchanger",
+    "version": "1.0.1",
+    "description": "traffic exchange software",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "pack:osx": "electron-packager . Exchanger --out=../dist/osx --asar=true --platform=darwin --arch=x64 --icon=build/icon.icns --prune=true",
+        "pack:linux": "electron-packager . Exchanger --out=../dist/linux --asar=true --platform=linux --arch=x64 --icon=build/png/512x512.png --prune=true",
+        "pack:win32": "electron-packager . Exchanger --out=../dist/win --asar=true --platform=win32 --arch=ia32 --icon=build/icon.ico --prune=true",
+        "build": "npm run pack:osx && npm run pack:linux && npm run pack:win32"
+    },
+    "keywords": [
+        "Traffic",
+        "Exchange",
+        "System",
+        "Surfow"
+    ],
+    "author": "TaliumDev",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "^3.0.1",
+        "electron-builder": "^20.38.2",
+        "electron-packager": "^13.0.0",
+        "electron-toolkit": "^1.0.24",
+        "electron-winstaller": "^2.7.0"
+    },
+    "dependencies": {},
+    "build": {
+        "appId": "com.electron.Exchanger",
+        "copyright": "Copyright © 2019 Madcoin",
+        "productName": "Exchanger",
+        "electronVersion": "3.0.1",
+        "asar": true,
+        "directories": {
+            "app": "D:\\surfow_app",
+            "output": "dist"
+        },
+        "win": {
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "ia32"
+                    ]
+                }
+            ]
+        },
+        "mac": {
+            "target": [
+                {
+                    "target": "dmg",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "category": "public.app-category.business"
+        },
+        "linux": {
+            "target": [
+                {
+                    "target": "debian package (deb)",
+                    "arch": [
+                        "ia32"
+                    ]
+                }
+            ]
+        }
     }
-  }
 }
