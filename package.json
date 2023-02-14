@@ -9,6 +9,7 @@
   },
   "author": "mohd-arif-un",
   "license": "MIT",
+  "start": "electron --no-sandbox ."
   "dependencies": {
 
   },
