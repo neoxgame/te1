@@ -4,13 +4,17 @@
   "description": "Facebook App For Windows Desktop",
   "main": "index.js",
   "scripts": {
-    "start": "electron --no-sandbox ."
+    "start": "electron ."
     "build": "electron-builder"
   },
   "author": "mohd-arif-un",
   "license": "MIT",
    "dependencies": {
 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gergof/electron-builder-sandbox-fix.git"
   },
   "devDependencies": {
     "electron-builder": "^21.2.0",
