@@ -1,16 +1,33 @@
 {
-  "name": "handy-string-scorch-ldzzt",
-  "productName": "handy-string-scorch-ldzzt",
-  "description": "My Electron application description",
-  "keywords": [],
-  "main": "./main.js",
+  "name": "facebook-desktop",
   "version": "1.0.0",
-  "author": "admin",
+  "description": "Facebook App For Windows Desktop",
+  "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
-  "dependencies": {},
+  "author": "mohd-arif-un",
+  "license": "MIT",
+  "dependencies": {
+
+  },
   "devDependencies": {
-    "electron": "20.1.4"
+    "electron-builder": "^21.2.0",
+    "eslint": "^6.2.1",
+    "eslint-config-standard": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "electron": "^5.0.7"
+  },
+  "build": {
+    "appId": "com.ipenywis.app",
+    "productName": "Facebook Desktop",
+    "target": "portable",
+    "directories": {
+      "output": "build"
+    }
   }
 }
