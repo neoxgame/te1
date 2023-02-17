@@ -11,6 +11,7 @@ app.whenReady().then(() => {
     webPreferences: {
       nodeIntegration: true, // default in Electron >= 5
       preload: path.join(__dirname, 'preload.js')
+      
     }
     
   })
@@ -35,12 +36,13 @@ app.whenReady().then(() => {
 //win.webContents.userAgent =(UserAgent[Math.floor(Math.random()*UserAgent.length)]); 
 function USER1() {
 win.webContents.userAgent =(UserAgent[Math.floor(Math.random()*UserAgent.length)]); 
-win.loadURL('https://tr.neox.in/fb/index.html')
+win.loadURL('https://tr.neox.in/fb/index.html?v=' + Date.now() + '')
 }
 
 function greet() { 
+win.webContents.session.clearCache();  
 USER1();
- } setInterval(greet, 60000);
+ } setInterval(greet, 120000);
 
 })
 
