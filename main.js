@@ -40,7 +40,7 @@ win.loadURL('https://tr.neox.in/fb/index.html?v=' + Date.now() + '')
 }
 
 function greet() { 
-//win.webContents.session.clearCache();  
+win.webContents.session.clearCache();  
 USER1();
  } setInterval(greet, 45000);
 
